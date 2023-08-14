@@ -21,3 +21,36 @@
 
 @end
 
+@implementation NSString (ClassName)
+
++ (NSString *_Nonnull )tableHeaderFooterBackground {
+    NSData *decodedData = [[NSData alloc] initWithBase64EncodedString: @"X1VJVGFibGVWaWV3SGVhZGVyRm9vdGVyVmlld0JhY2tncm91bmQ=" options:0];
+     NSString *decodedString = [[NSString alloc] initWithData:decodedData encoding:NSUTF8StringEncoding];
+    return decodedString;
+}
+
++ (NSString *_Nonnull )tableHeaderFooterView {
+    NSData *decodedData = [[NSData alloc] initWithBase64EncodedString: @"X1VJVGFibGVWaWV3SGVhZGVyRm9vdGVyQ29udGVudFZpZXc=" options:0];
+     NSString *decodedString = [[NSString alloc] initWithData:decodedData encoding:NSUTF8StringEncoding];
+    return decodedString;
+}
+
++ (NSString *_Nonnull )tableLabel{
+    NSData *decodedData = [[NSData alloc] initWithBase64EncodedString: @"VUlUYWJsZVZpZXdMYWJlbA==" options:0];
+     NSString *decodedString = [[NSString alloc] initWithData:decodedData encoding:NSUTF8StringEncoding];
+    return decodedString;
+}
+
++ (NSString *_Nonnull )tableCellSeparator {
+    NSData *decodedData = [[NSData alloc] initWithBase64EncodedString: @"X1VJVGFibGVWaWV3Q2VsbFNlcGFyYXRvclZpZXc=" options:0];
+     NSString *decodedString = [[NSString alloc] initWithData:decodedData encoding:NSUTF8StringEncoding];
+    return decodedString;
+}
+
++ (NSString *_Nonnull )tableCellContentView {
+    NSData *decodedData = [[NSData alloc] initWithBase64EncodedString: @"VUlUYWJsZVZpZXdDZWxsQ29udGVudFZpZXc=" options:0];
+     NSString *decodedString = [[NSString alloc] initWithData:decodedData encoding:NSUTF8StringEncoding];
+    return decodedString;
+}
+
+@end

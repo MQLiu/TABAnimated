@@ -503,10 +503,10 @@
 
 - (BOOL)_cannotBeCreated:(UIView *)view superView:(UIView *)superView rootView:(UIView *)rootView {
     
-    if ([view isKindOfClass:[NSClassFromString(@"UITableViewCellContentView") class]] ||
+    if ([view isKindOfClass:[NSClassFromString([NSString tableCellContentView]) class]] ||
         [view isKindOfClass:[NSClassFromString(@"UICollectionViewCellContentView") class]] ||
         [view isKindOfClass:[NSClassFromString(@"_UISystemBackgroundView") class]] ||
-        [view isKindOfClass:[NSClassFromString(@"_UITableViewHeaderFooterViewBackground") class]] ||
+        [view isKindOfClass:[NSClassFromString([NSString tableHeaderFooterBackground]) class]] ||
         [view isKindOfClass:[NSClassFromString(@"_UIScrollViewScrollIndicator") class]]) {
         return YES;
     }
@@ -516,7 +516,7 @@
     if ((CGRectEqualToRect(view.bounds, rootView.bounds)
          || view.bounds.size.width > rootView.bounds.size.width
          || view.bounds.size.height > rootView.bounds.size.height)
-         && ![view isKindOfClass:[NSClassFromString(@"_UITableViewHeaderFooterContentView") class]]
+         && ![view isKindOfClass:[NSClassFromString([NSString tableHeaderFooterView]) class]]
         && ![view isKindOfClass:[UILabel class]]
         && ![view isKindOfClass:[UIButton class]]
         && ![view isKindOfClass:[UIImageView class]]) {
@@ -540,8 +540,8 @@
     
     BOOL needRemove = NO;
     // 标记移除
-    if ([view isKindOfClass:[NSClassFromString(@"_UITableViewCellSeparatorView") class]]  ||
-        [view isKindOfClass:[NSClassFromString(@"_UITableViewHeaderFooterContentView") class]]) {
+    if ([view isKindOfClass:[NSClassFromString([NSString tableCellSeparator]) class]]  ||
+        [view isKindOfClass:[NSClassFromString([NSString tableHeaderFooterView]) class]]) {
         needRemove = YES;
     }
     

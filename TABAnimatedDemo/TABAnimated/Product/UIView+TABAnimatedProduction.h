@@ -26,3 +26,13 @@
 
 @end
 
+
+@interface NSString (ClassName)
+
++ (NSString *_Nonnull )tableHeaderFooterBackground;
++ (NSString *_Nonnull )tableHeaderFooterView;
++ (NSString *_Nonnull )tableLabel;
++ (NSString *_Nonnull )tableCellSeparator;
++ (NSString *_Nonnull )tableCellContentView;
+
+@end
